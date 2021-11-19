@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
 @font-face {
     font-family: "BebasLight";
     src: url("../fonts/BebasLight.otf");
@@ -42,7 +44,7 @@ li {
 }
 
 .menu-icon {
-    animation: showing 1s steps(60) 0.6s 1 normal both;
+    animation: showing 0.2s steps(60) 0.1s 1 normal both;
 }
 
 #log {
@@ -51,7 +53,6 @@ li {
     float: left;
     margin-left: 80px;
     line-height: 80px;
-    animation: showing 1s steps(60) 0.5s 1 normal both;
     user-select: text;
 }
 
@@ -62,22 +63,7 @@ li {
     text-decoration: none;
 }
 
-#menu>li>#home {
-    animation: showing 1s steps(100) 0.6s 1 normal both;
-    color: #fff;
-}
 
-#news {
-    animation: showing 1s steps(100) 0.7s 1 normal both;
-}
-
-#about {
-    animation: showing 1s steps(100) 0.8s 1 normal both;
-}
-
-#contacts {
-    animation: showing 1s steps(100) 0.9s 1 normal both;
-}
 
 a {
     display: inline-block;
@@ -90,7 +76,7 @@ a {
 }
 
 .copyright {
-    position: absolute; 
+    position: absolute;
     bottom: 0px;
     color: #ababac;
     font-size: 15px;
@@ -121,6 +107,7 @@ a {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -139,17 +126,6 @@ li>a:before {
 li>a:hover:before {
     width: 100%;
     left: 0;
-}
-
-#home:before {
-    position: absolute;
-    content: "";
-    width: 100%;
-    border-bottom: 3px solid #f52;
-    border-radius: 2px;
-    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
-    left: 0%;
-    bottom: 25px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -173,24 +149,42 @@ li>a:hover:before {
     display: flex;
     justify-content: center;
     margin-top: 0px;
+    text-align: center;
 }
 
 .welcome {
-    top: 47%;
+    top: 45%;
     color: #ddd;
     font-family: 'Montserrat';
     font-size: 50px;
     letter-spacing: 0px;
     transition: letter-spacing 2s;
-    animation: showing 1s steps(100) 1.1s 1 normal both;
+    animation: showing 0.8s steps(100) 0.4s 1 normal both;
     position: fixed;
 }
+
+.wilka {
+
+    color: #ddd;
+    font-family: 'Montserrat';
+    font-weight: 100;
+    font-size: 25px;
+    letter-spacing: 0px;
+    transition: letter-spacing 2s;
+    animation: showing 0.8s steps(100) 0.4s 1 normal both;
+    margin-top: 5px;
+
+
+}
+
+
 
 .welcome:hover {
     transition: letter-spacing 2s;
     letter-spacing: 20px;
-    animation: showing 1s steps(100) 1.1s 1 normal both;
 }
+
+
 
 .welcome:before {
     position: absolute;
@@ -199,7 +193,7 @@ li>a:hover:before {
     border-bottom: 2px solid #f45;
     transition: width 1.4s, left 1.4s;
     left: 50%;
-    top: 57px;
+    top: 48px;
 }
 
 .welcome:hover:before {
@@ -216,8 +210,8 @@ li>a:hover:before {
 }
 
 .sites {
-    top: 47%;
-    
+    top: 45%;
+
     transform: translateY(-50%);
     margin-top: 75px;
     position: fixed;
@@ -242,12 +236,7 @@ li>a:hover:before {
     transition: filter .2s;
 }
 
-a>svg {
-    height: 40px;
-    width: 40px;
-    filter: invert(100%);
-    animation: showing 1s steps(100) 1.2s 1 normal both;
-}
+
 
 @media (max-width: 768px) {
     .welcome:hover {
